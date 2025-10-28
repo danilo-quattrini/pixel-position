@@ -1,6 +1,3 @@
-import './bootstrap';
+import "./bootstrap";
 
-import.meta.glob(
-    '../img/**',
-    {eager: true}
-);
+import.meta.glob("../img/**", { eager: true });

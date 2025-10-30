@@ -1,4 +1,4 @@
-@props(['size' => 'base'])
+@props(['tag','size' => 'base'])
 @php
     $classes = 'rounded-xl bg-white/10 font-bold hover:bg-white/25 transition-colors duration-300';
     if($size === 'base'){
@@ -8,6 +8,4 @@
     }
 @endphp
 
-<a {{$attributes->merge(['class' => $classes ])}}>
-    {{$slot}}
-</a>
+<a href="/tags/{{ strtolower($tag->name) }}"{{$attributes->merge(['class' => $classes])}}> {{ $tag->name }} </a>

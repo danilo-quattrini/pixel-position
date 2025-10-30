@@ -1,3 +1,4 @@
+@props(['job'])
 <x-card class="flex items-center gap-x-6">
     <!-- LEFT HEAD  -->
     <div>
@@ -17,9 +18,9 @@
     <!-- RIGHT HEAD -->
     <div class="mt-auto">
         <div class="space-x-1">
-            <x-tag href="#">Tag</x-tag>
-            <x-tag href="#">Tag</x-tag>
-            <x-tag href="#">Tag</x-tag>
+            @foreach($job->tags as $tag)
+                <x-tag :$tag/>
+            @endforeach
         </div>
     </div>
 </x-card>

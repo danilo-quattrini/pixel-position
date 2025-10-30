@@ -1,25 +1,24 @@
-<div class="mt-10 flex flex-col rounded-xl bg-white/5 p-4 text-center">
+<x-card class="flex flex-col text-center">
     <!-- TOP HEAD -->
     <div class="self-start text-sm">
         <p>Employer Name</p>
     </div>
     <!-- CENTER HEAD -->
-    <div class="py-8 font-bold">
+    <div class="py-8">
         <!-- JOB TITLE -->
-        <h3>Full Stack Laravel Developer</h3>
-        <p>Full time - From $60.000</p>
+        <h3 class="group-hover:text-blue-800 text-xl font-bold transition-colors duration-300">Full Stack Laravel
+            Developer</h3>
+
+        <p class="text-sm mt-4">Full time - From $60.000</p>
     </div>
 
     <!-- BOTTOM HEAD -->
-    <div class="py-2 flex items-center justify-between">
-        <div>
-            <a class="rounded-xl bg-white/10 px-2 py-1 text-xs hover:bg-white/25 transition-colors duration-300"
-               href="#">Tag</a>
-            <a class="rounded-xl bg-white/10 px-2 py-1 text-xs hover:bg-white/25 transition-colors duration-300"
-               href="#">Tag</a>
-            <a class="rounded-xl bg-white/10 px-2 py-1 text-xs hover:bg-white/25 transition-colors duration-300"
-               href="#">Tag</a>
+    <div class="flex justify-between items-center mt-auto">
+        <div class="space-x-1">
+            <x-tag href="#" size="small">Frontend</x-tag>
+            <x-tag href="#" size="small">Backend</x-tag>
+            <x-tag href="#" size="small">Manager</x-tag>
         </div>
-        <img src="http://placeholder.it/42/42" alt="employer logo" class="rounded-xl"/>
+        <x-employer-logo :width="42"/>
     </div>
-</div>
+</x-card>

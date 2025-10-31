@@ -14,7 +14,9 @@
             <x-section-heading>Featured Jobs</x-section-heading>
             <div class="grid lg:grid-cols-3 gap-8 mt-6">
                 @foreach($jobs as $job)
-                    <x-job-card :$job/>
+                    @if($job->featured)
+                        <x-job-card :$job/>
+                    @endif
                 @endforeach
             </div>
         </section>
@@ -22,14 +24,16 @@
         <!-- Tag section Bar -->
         <section>
             <x-section-heading>Tags</x-section-heading>
-            <div class="mt-6 space-x-1">
-                @foreach($tags as $tag)
-                    <x-tag :$tag/>
+            <div class="grid grid-cols-6 mt-6 gap-3">
+                @foreach($jobs as $job)
+                    @foreach($job->tags as $tag)
+                        <x-tag :$tag/>
+                    @endforeach
                 @endforeach
             </div>
-
         </section>
 
+        <!-- Find Job-->
         <section>
             <x-section-heading>Find Jobs</x-section-heading>
             <div class="grid lg:grid-cols-1 md:grid-cols-2 sm:grid-cols-1 max-w-full gap-6 mt-6">
@@ -38,5 +42,6 @@
                 @endforeach
             </div>
         </section>
+
     </div>
 </x-layout>

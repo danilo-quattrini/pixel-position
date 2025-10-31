@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->string('location');
             $table->string('schedule')->default('Full Time');
             $table->string('url'); // url for the job after we publish it
+            $table->boolean('featured')->default(false);
             $table->timestamps();
         });
     }

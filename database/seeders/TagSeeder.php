@@ -13,17 +13,6 @@ class TagSeeder extends Seeder
      */
     public function run(): void
     {
-        Tag::factory()->create([
-            'name' => 'Front End'
-        ]);
-        Tag::factory()->create([
-            'name' => 'Back End'
-        ]);
-        Tag::factory()->create([
-            'name' => 'Manager'
-        ]);
-        Tag::factory()->create([
-            'name' => 'Full Stack Dev'
-        ]);
+
     }
 }
